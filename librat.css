@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Krem më i theksuar dhe pak më i errët */
+}
+/* NAVBAR */
+nav {
+  background-color: #6f4e37; /* Kafe */
+  padding: 1em 40px;
+}
+
+/* Kontenieri ndahet në tre pjesë */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Butoni back anash majtas */
+.nav-left {
+  flex: 1;
+}
+
+.nav-left .back-link {
+  color: #fff;               /* shkronja të bardha */
+  font-weight: bold;
+  text-decoration: none;     /* pa vijë nën tekst */
+  cursor: pointer;
+  padding: 0;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.nav-left .back-link:hover {
+  text-decoration: underline;
+}
+
+/* Menuja në qendër */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;  /* titujt në qendër */
+}
+
+.nav-center ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.nav-center li {
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;              /* shkronja të bardha */
+  font-size: 1em;
+  text-decoration: none;    /* pa vijë nën tekst */
+}
+
+.nav-center li:hover {
+  text-decoration: underline;
+}
+
+/* Zona e djathtë bosh */
+.nav-right {
+  flex: 1;
+}
+
+/* MAIN */
+main {
+  padding: 40px;
+  min-height: 80vh;
+}
+
+/* GRID i librave */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#quote {
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #6f4e37;
+}
+
+/* FOOTER */
+footer {
+  background-color: #6f4e37;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsive për ekran më të vogël */
+@media (max-width: 1000px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}
